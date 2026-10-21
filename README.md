@@ -3,7 +3,7 @@
 The hub for the interactive explainers. One card per visualization; every card
 opens the live piece, and carries a localhost link and a source link.
 
-**Live:** https://visualizations-jlb.netlify.app/
+**Live:** https://jacoblbagent.github.io/visualizations/
 **Local:** http://localhost:5192/
 **Repo:** https://github.com/jacoblbagent/visualizations
 
@@ -38,7 +38,12 @@ is edited. The hub only points at it; it holds no copies.
    `.links` (localhost port, source repo). The count chip in the header reads
    the number of cards from the DOM, so it never needs updating by hand.
 
-3. **Deploy:** `npx netlify-cli deploy --dir=. --prod` from this directory.
+3. **Deploy:** commit and push — GitHub Pages serves `main` at the repo root,
+   so the push *is* the deploy:
+
+   ```bash
+   git add -A && git commit -m "viz: add <name>" && git push
+   ```
 
 Keep thumbnails at 16:10. The card crops with `object-fit: cover`, so anything
 else loses its edges.
