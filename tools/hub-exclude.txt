@@ -1,0 +1,43 @@
+# Projects under ~/Code that the hub check should never flag.
+#
+# One project directory name per line. `#` starts a comment. Blank lines are
+# ignored. Two reasons for an entry: the thing is not a visualization at all,
+# or it is one that is deliberately kept out of the hub.
+
+# --- not visualizations: apps, dashboards, guides, tools, games ---
+bike-shop-dashboard
+brevard-countdown
+broughton-web-development
+codechat
+deal-scout
+dirt-jumps
+fpv-buyers-guide
+fpv-sim
+group-ride-finder
+hermes-web-ui
+image-compressor
+minecraft-builds-showcase
+mountain-bike-compare
+piper-aero
+roommapper
+school-supplies-guide
+sound-direction-app
+todo-list
+trail-dig-days
+ts-to-mp4
+ui-design-styles
+wow-art-search
+wow-offline-camera-guide
+
+# --- visualizations, deliberately out of scope ---
+# The hub is the four explainers: energy, VPN, LLM tool calling, prompt to
+# response. These are all interactive pieces, but none of them is an explainer
+# of the same kind. Revisit any of them by deleting its line and adding a card.
+astronaut-simulator
+data-structures-visualizer
+drone-airspace-map
+lot-acreage-visualizer
+minimal-agent
+ohms-law-3d
+route-distance-calculator
+us-fun-facts-map

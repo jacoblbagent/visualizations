@@ -45,6 +45,25 @@ is edited. The hub only points at it; it holds no copies.
 Keep thumbnails at 16:10. The card crops with `object-fit: cover`, so anything
 else loses its edges.
 
+## Staying in sync
+
+`tools/check_hub.py` compares the hub against what is actually on disk, and the
+hub's start script runs it on every boot. It flags two things:
+
+- a card that has gone stale — thumbnail missing or a different size than the
+  card declares, localhost port no longer in `projects.json`, project directory
+  or start script gone, no source repo link
+- a project under `~/Code` with an `index.html` that has no card
+
+```bash
+python3 tools/check_hub.py     # exit 0 when the hub is sound and nothing is unflagged
+```
+
+When something new turns up, either add a card or record the decision in
+`tools/hub-exclude.txt`, one project name per line. That file is the written
+record of what is deliberately not in the hub, so a thing is never silently
+forgotten or silently added. The checker only reports; it never edits the page.
+
 ## Design notes
 
 Tokens at `:root` with a `prefers-color-scheme: dark` block; Instrument Sans
