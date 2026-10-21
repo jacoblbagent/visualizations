@@ -8,7 +8,7 @@ opens the live piece, and carries a localhost link and a source link.
 **Repo:** https://github.com/jacoblbagent/visualizations
 
 A single page, no build step, no dependencies. `index.html` plus two fonts and
-four thumbnails is the whole thing.
+five thumbnails is the whole thing.
 
 ## What's in it
 
@@ -18,6 +18,7 @@ four thumbnails is the whole thing.
 | How a VPN Works | [vpn-infographic](https://jacoblbagent.github.io/vpn-infographic/) | :5185 |
 | How LLM tool calling works | [agent-tool-calling-viz](https://jacoblbagent.github.io/agent-tool-calling-viz/) | :5186 |
 | Prompt → Response | [prompt-to-response-viz](https://jacoblbagent.github.io/prompt-to-response-viz/) | :5189 |
+| How a tailnet works | [tailnet-viz](https://jacoblbagent.github.io/tailnet-viz/) | :5193 |
 
 Each visualization also keeps its own project under `~/Code/` — that is where it
 is edited. The hub only points at it; it holds no copies.
