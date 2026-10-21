@@ -24,13 +24,10 @@ is edited. The hub only points at it; it holds no copies.
 
 ## Adding a new visualization
 
-1. **Capture a thumbnail** at 1440×900 from the running piece, into
-   `assets/thumbs/<slug>.png`:
-
-   ```bash
-   # with the visualization's own dev server up on <port>
-   # headless Chromium at 1440x900, deviceScaleFactor 2, then downscale to 1440x900
-   ```
+1. **Capture a thumbnail** at 1440×900 into `assets/thumbs/<slug>.png` — real
+   pixels from the running piece, never a mockup. With the visualization's own
+   server up, screenshot it headlessly at 1440×900 with `deviceScaleFactor` 2
+   (crisper hairlines) and downscale to 1440×900 before saving.
 
 2. **Add a card.** Copy an existing `<article class="card">` block in
    `index.html` and change four things: the `<img src>` slug, the `<h2>` live
