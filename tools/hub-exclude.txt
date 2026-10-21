@@ -19,6 +19,8 @@ image-compressor
 minecraft-builds-showcase
 mountain-bike-compare
 piper-aero
+randomutils
+randomutils-audit
 roommapper
 school-supplies-guide
 sound-direction-app

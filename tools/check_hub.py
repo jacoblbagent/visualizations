@@ -70,10 +70,24 @@ def parse_cards() -> list[dict]:
 
 
 def parse_registry() -> dict[int, dict]:
+    """Every registered project by check_port — the sidebar's own rows AND the
+    pieces nested under one (a project's `children`).
+
+    A hub card's piece is registered in the same file whether it is a row of its
+    own or a piece of another project: same keys, same start script, same probe.
+    Only its PLACEMENT differs — the sidebar draws it in a fold under its
+    parent — so the hub's check has to read both levels or every card looks
+    unregistered.
+    """
     if not REGISTRY.exists():
         return {}
     data = json.loads(REGISTRY.read_text())
-    return {p["check_port"]: p for p in data.get("projects", []) if "check_port" in p}
+    out: dict[int, dict] = {}
+    for p in data.get("projects", []):
+        for q in (p, *(p.get("children") or [])):
+            if "check_port" in q:
+                out[q["check_port"]] = q
+    return out
 
 
 def image_size(path: Path) -> tuple[int, int] | None:

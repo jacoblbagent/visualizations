@@ -23,6 +23,13 @@ five thumbnails is the whole thing.
 Each visualization also keeps its own project under `~/Code/` — that is where it
 is edited. The hub only points at it; it holds no copies.
 
+Every piece is also registered in the **Hermes Web UI sidebar**, but not as a
+project of its own: it is a **piece of the Visualizations row** (`children` in
+`~/Code/hermes-web-ui/scripts/projects.json`), which the sidebar draws in a fold
+under that one row — closed until its chevron is pressed, each piece with its own
+start button and link glyphs. The hub is the list of the pieces; the sidebar is
+where they are started.
+
 ## Adding a new visualization
 
 1. **Capture a thumbnail** at 1440×900 into `assets/thumbs/<slug>.png` — real
