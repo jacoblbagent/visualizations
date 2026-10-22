@@ -19,6 +19,7 @@ five thumbnails is the whole thing.
 | How LLM tool calling works | [agent-tool-calling-viz](https://jacoblbagent.github.io/agent-tool-calling-viz/) | :5186 |
 | Prompt → Response | [prompt-to-response-viz](https://jacoblbagent.github.io/prompt-to-response-viz/) | :5189 |
 | How a tailnet works | [tailnet-viz](https://jacoblbagent.github.io/tailnet-viz/) | :5193 |
+| How models get tuned | [model-tuning-viz](https://jacoblbagent.github.io/model-tuning-viz/) | :5194 |
 
 Each visualization also keeps its own project under `~/Code/` — that is where it
 is edited. The hub only points at it; it holds no copies.
