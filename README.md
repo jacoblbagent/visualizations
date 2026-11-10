@@ -22,6 +22,7 @@ five thumbnails is the whole thing.
 | How models get tuned | [model-tuning-viz](https://jacoblbagent.github.io/model-tuning-viz/) | :5194 |
 | Latent space of a small LLM | [latent-space-viz](https://jacoblbagent.github.io/latent-space-viz/) | :5205 |
 | How timezones work | [timezones-viz](https://jacoblbagent.github.io/timezones-viz/) | :5209 |
+| How Docker works | [docker-viz](https://jacoblbagent.github.io/docker-viz/) | :5212 |
 
 Each visualization also keeps its own project under `~/Code/` — that is where it
 is edited. The hub only points at it; it holds no copies.
